@@ -45,6 +45,8 @@ class _jobState extends State<job> {
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
+    double proStrength = MediaQuery.of(context).size.width;
+
     // return Scaffold(
     //   backgroundColor: bg,
     //   body: Column(
@@ -759,6 +761,49 @@ class _jobState extends State<job> {
               height: 15,
             ),
 
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text("Profile Strength : ", style: TextStyle(color: textColor1, fontSize: 12),textAlign: TextAlign.left,),
+                    Text("Beginner", style: TextStyle(color: textColor1, fontSize: 12),textAlign: TextAlign.left,),
+                      
+                      ],
+                    ),
+                    SizedBox(height: 10,),
+                    Stack(
+                      children:[ Container(
+                        height: 5,
+                        width: proStrength,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(3),
+                          color: colorgreay
+                        ),
+                      ),
+
+                      Container(
+                        height: 5,
+                        width: (proStrength/5)*2,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(3),
+                          color: blue1
+                        ),
+                      ),
+                      ]
+                    )
+                    
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 15,),
+
 // Modified Hero
 
 
@@ -803,7 +848,7 @@ class _jobState extends State<job> {
                                         borderRadius: BorderRadius.circular(30),
 
                                       ),
-                                      backgroundColor: colorgreay,
+                                      backgroundColor: blue1,
                                       onPressed: () {
                                         // Navigator.of(context).push(MaterialPageRoute(builder: (context) => servicepage()));
                                       },
