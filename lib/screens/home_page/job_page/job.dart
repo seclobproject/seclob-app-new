@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:seclob_pro/screens/home_page/job_page/postjob/post_job.dart';
+import 'package:seclob_pro/screens/home_page/service/service_page.dart';
+import 'package:seclob_pro/widgets/appbar_common.dart';
 import '../../../commonpage/searchpage.dart';
 import '../../../navigation/app_drawer.dart';
 import '../../../resources/color.dart';
@@ -544,70 +546,7 @@ class _jobState extends State<job> {
       endDrawerEnableOpenDragGesture: false,
       // drawer: appdrawer(),
       backgroundColor: bg,
-      appBar: AppBar(
-        leading: BackButton(color: textColor,),
-        title: Row(
-          children: [
-            Text('Jobs',style: TextStyle(color: textColor),),
-            Spacer(),
-            Container(
-                    height: 30,
-                    width: 150,
-                    decoration: BoxDecoration(
-                        color: img_bagground,
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey, // shadow color
-                            blurRadius: 0, // shadow radius
-                            offset: Offset(0, .1), // shadow offset
-                            spreadRadius:
-                                0, // The amount the box should be inflated prior to applying the blur
-                            // set blur style
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(4)),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      child: Row(
-                        children: [
-                          SvgPicture.asset(
-                            'assets/svg/location.svg',
-                            // Replace with the path to your SVG file
-                            width: 15,
-                            height: 15,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Container(
-                            width: 110,
-                            child: Text(
-                              "Palazhi,Kozhikode,67..",
-                              style: TextStyle(
-                                fontSize: 12,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 15,),
-
-                   SvgPicture.asset(
-                    'assets/svg/drawerblack.svg',
-                    // Replace with the path to your SVG file
-                    width: 20,
-                    height: 20,
-                    fit: BoxFit.fill,
-                    color: textColor,
-                  ),
-                  
-                  
-          ],
-        ),
-      ),
+      appBar: JobAppbar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -804,37 +743,54 @@ class _jobState extends State<job> {
 
             SizedBox(height: 15,),
 
-// Modified Hero
 
+  // New Hero
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: SizedBox(
-                height: 140,
-                child: ListView.builder(
-                  controller: _scrollController,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 20,
-                  itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 5, vertical: 10),
-                          child: Container(
-                            height: 100,
-                            width: 75,
-                            decoration: BoxDecoration(
-                                color: bg,
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.grey.shade100,
-                                      offset: Offset(0, 4),
-                                      blurRadius: 3)
-                                ],
-                                borderRadius:
-                                BorderRadius.circular(10)),
-                            child: Center(
+  Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Container(
+                width: double.infinity,
+                // decoration: BoxDecoration(
+                //   borderRadius: BorderRadius.circular(20),
+                //   gradient: LinearGradient(
+                //     colors: [
+                //       Color.fromRGBO(15, 63, 84, 1),
+                //       Color.fromRGBO(5, 120, 190, 1),
+                //     ],
+                //     begin: Alignment.topLeft,
+                //     end: Alignment.bottomRight,
+                //   ),
+                //   boxShadow: [
+                //     BoxShadow(
+                //       color: Colors.black12,
+                //       offset: Offset(5, 5),
+                //       blurRadius: 10,
+                //     ),
+                //   ],
+                // ),
+                child: Center(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[50],
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    child: GridView.builder(
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: 8,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+
+                        crossAxisCount: 4,
+                        childAspectRatio: (2.2 / 3),
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                      ),
+                        padding: EdgeInsets.zero,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Column(
+                          children: [
+                            Center(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -845,12 +801,11 @@ class _jobState extends State<job> {
                                         vertical: 5),
                                     child: FloatingActionButton(
                                       shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(30),
-
+                                        borderRadius: BorderRadius.circular(30)
                                       ),
-                                      backgroundColor: blue1,
+                                      backgroundColor: textgrey1,
                                       onPressed: () {
-                                        // Navigator.of(context).push(MaterialPageRoute(builder: (context) => servicepage()));
+                                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => servicepage()));
                                       },
                                       child: Icon(
                                         Icons.train,
@@ -866,18 +821,94 @@ class _jobState extends State<job> {
                                         color: textcolor),
                                   ),
                                   SizedBox(height: 15,),
-
+                            
                                 ],
                               ),
                             ),
-                          ),
-                        ),
-                      ],
-                    );
-                  },
+                          ],
+                        );
+                      },
+                    ),
+                  ),
                 ),
               ),
             ),
+
+
+// Modified Hero
+
+
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 5),
+            //   child: SizedBox(
+            //     height: 140,
+            //     child: ListView.builder(
+            //       controller: _scrollController,
+            //       scrollDirection: Axis.horizontal,
+            //       itemCount: 20,
+            //       itemBuilder: (context, index) {
+            //         return Column(
+            //           children: [
+            //             Padding(
+            //               padding: const EdgeInsets.symmetric(
+            //                   horizontal: 5, vertical: 10),
+            //               child: Container(
+            //                 height: 100,
+            //                 width: 75,
+            //                 decoration: BoxDecoration(
+            //                     color: bg,
+            //                     boxShadow: [
+            //                       BoxShadow(
+            //                           color: Colors.grey.shade100,
+            //                           offset: Offset(0, 4),
+            //                           blurRadius: 3)
+            //                     ],
+            //                     borderRadius:
+            //                     BorderRadius.circular(10)),
+            //                 child: Center(
+            //                   child: Column(
+            //                     mainAxisAlignment: MainAxisAlignment.center,
+            //                     crossAxisAlignment: CrossAxisAlignment.center,
+            //                     children: [
+            //                       Padding(
+            //                         padding:
+            //                         const EdgeInsets.symmetric(
+            //                             vertical: 5),
+            //                         child: FloatingActionButton(
+            //                           shape: RoundedRectangleBorder(
+            //                             borderRadius: BorderRadius.circular(30),
+
+            //                           ),
+            //                           backgroundColor: blue1,
+            //                           onPressed: () {
+            //                             // Navigator.of(context).push(MaterialPageRoute(builder: (context) => servicepage()));
+            //                           },
+            //                           child: Icon(
+            //                             Icons.train,
+            //                             size: 30,
+            //                             color: Colors.white,
+            //                           ),
+            //                         ),
+            //                       ),
+            //                       Text(
+            //                         "Electrician",
+            //                         style: TextStyle(
+            //                             fontSize: 10,
+            //                             color: textcolor),
+            //                       ),
+            //                       SizedBox(height: 15,),
+
+            //                     ],
+            //                   ),
+            //                 ),
+            //               ),
+            //             ),
+            //           ],
+            //         );
+            //       },
+            //     ),
+            //   ),
+            // ),
 
             GestureDetector(
               onTap: () {
@@ -1013,7 +1044,7 @@ class _jobState extends State<job> {
                                   'assets/svg/add.svg',
                                   height: 18,
                                   width: 18,
-                                  color: blue1,
+                                  color: green,
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -1031,7 +1062,7 @@ class _jobState extends State<job> {
                                   'assets/svg/time2.svg',
                                   height: 18,
                                   width: 18,
-                                  color: blue1,
+                                  color: green,
                                 ),
                                 SizedBox(
                                   width: 10,
