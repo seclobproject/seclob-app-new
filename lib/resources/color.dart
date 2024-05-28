@@ -26,6 +26,7 @@ const Color tittle = Color.fromRGBO(164, 171, 177, 1);
 
 const Color button1 = Color.fromRGBO(48, 78, 91, 1);
 const Color button2 = Color.fromRGBO(92, 61, 84, 1);
+const Color buttonGreen = Color.fromRGBO(44, 176, 112, 1);
 
 const Color buttontext1 = Color.fromRGBO(80, 200, 252, 1);
 const Color background = Color.fromRGBO(249, 249, 249, 1);
