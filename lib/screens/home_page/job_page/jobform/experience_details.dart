@@ -14,7 +14,7 @@ class experiencedetails extends StatefulWidget {
 class _experiencedetailsState extends State<experiencedetails> {
 
   int selectedChip = 0;
-  List<String> options = ['Experienced', 'Fresher', 'Student'];
+  List<String> options = ['Experienced', 'Fresher', 'Student','Freelancer'];
 
   bool _checkbox = true;
 
