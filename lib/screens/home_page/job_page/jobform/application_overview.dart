@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seclob_pro/resources/color.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/questions.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/success_screen.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
 import 'package:seclob_pro/widgets/application_progress.dart';
 
@@ -297,10 +298,10 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
 
               GestureDetector(
                               onTap: (){
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(builder: (context) => QuestionsScreen()),
-                                // );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => SuccessScreen()),
+                                );
                               },
                               child: Container(
                                 height: 40,
