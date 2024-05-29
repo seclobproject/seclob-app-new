@@ -3,10 +3,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/contact_information.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/experience_details.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/experience_page.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/questions.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
+import 'package:seclob_pro/widgets/application_progress.dart';
 
-import '../../../resources/color.dart';
-import 'jobform/personal_details.dart';
+import '../../../../resources/color.dart';
+import 'personal_details.dart';
 
 class uploadresume extends StatefulWidget {
   const uploadresume({super.key});
@@ -82,7 +84,7 @@ class _uploadresumeState extends State<uploadresume> {
                               onTap: (){
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => ExpreiencePage()),
+                                  MaterialPageRoute(builder: (context) => QuestionsScreen()),
                                 );
                               },
                               child: Container(
@@ -98,17 +100,24 @@ class _uploadresumeState extends State<uploadresume> {
                             ),
                       ],
                     ),
-                  )
+                  ),
+
+
+
+                  SizedBox(height: 400,),
+                ProgressBar(stepVal: 2)
+
+                
             
                 ],
               ),
             ),
           ),
-
-          SizedBox(height: 20,),
+          
 
         ],
       ),
+      
     );
   }
 }

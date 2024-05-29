@@ -5,8 +5,9 @@ import 'package:seclob_pro/screens/home_page/job_page/jobform/application_overvi
 import 'package:seclob_pro/screens/home_page/job_page/jobform/experience_details.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:seclob_pro/screens/home_page/job_page/uploadResume.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/uploadResume.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
+import 'package:seclob_pro/widgets/application_progress.dart';
 
 class ExpreiencePage extends StatefulWidget {
   const ExpreiencePage({super.key});
@@ -16,6 +17,14 @@ class ExpreiencePage extends StatefulWidget {
 }
 
 class _ExpreiencePageState extends State<ExpreiencePage> {
+  String Experiencedropdownvalue = '3 Months - 6 months';
+  var Experienceitems = [
+    '3 Months - 6 months',
+    '1 - 2 year',
+    '2-3 year',
+    '3 - 5 year',
+    'I dont have experience'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,8 +86,8 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                         child: TextField(
                           textAlign: TextAlign.start, // <-- Main change here
                           decoration: InputDecoration(
-                              border: InputBorder.none,
-                              ),
+                            border: InputBorder.none,
+                          ),
                           onChanged: (text) {},
                         ),
                       ),
@@ -88,35 +97,55 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                     ),
                     Text(
                       "Experience",
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       height: 5,
                     ),
                     Container(
+                      alignment: Alignment.center,
+                      width: double.infinity,
+                      height: 45,
                       decoration: BoxDecoration(
-                          border: Border.all(
-                            color: textColor,
-                            width: 0.5,
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: textgray),
+                        color: Colors.white,
+                      ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: TextField(
-                          textAlign: TextAlign.start, // <-- Main change here
-                          decoration: InputDecoration(
-                              border: InputBorder.none,),
-                          onChanged: (text) {},
+                        child: DropdownButton<String>(
+                          value: Experiencedropdownvalue,
+                          isExpanded: true,
+                          underline: Container(), // Remove default underline
+                          icon: Icon(Icons.keyboard_arrow_down,
+                              color: textgrey1), // Set arrow color
+                          items: Experienceitems.map((String item) {
+                            return DropdownMenuItem(
+                              value: item,
+                              child: Text(
+                                item,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16), // Adjust text style
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              Experiencedropdownvalue = newValue!;
+                            });
+                          },
                         ),
                       ),
                     ),
-
                     SizedBox(
                       height: 20,
                     ),
                     Text(
                       "Job title",
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       height: 5,
@@ -133,45 +162,52 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                         child: TextField(
                           textAlign: TextAlign.start, // <-- Main change here
                           decoration: InputDecoration(
-                              border: InputBorder.none,
-                              ),
+                            border: InputBorder.none,
+                          ),
                           onChanged: (text) {},
                         ),
                       ),
                     ),
-
                     SizedBox(height: 20),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                              onTap: (){
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => ApplicationOverview()),
-                                );
-                              },
-                              child: Container(
-                                height: 40,
-                                width: 85,
-                                decoration: BoxDecoration(
-                                  color: blue1,
-                                    border: Border.all(color: bordercolor),
-                                    borderRadius: BorderRadius.all(Radius.circular(5))
-                                ),
-                                child: Center(child: Text("Continue",style: TextStyle(fontSize: 10,color: bg1),)),
-                              ),
-                            ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ApplicationOverview()),
+                            );
+                          },
+                          child: Container(
+                            height: 40,
+                            width: 85,
+                            decoration: BoxDecoration(
+                                color: blue1,
+                                border: Border.all(color: bordercolor),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
+                            child: Center(
+                                child: Text(
+                              "Continue",
+                              style: TextStyle(fontSize: 10, color: bg1),
+                            )),
+                          ),
+                        ),
                       ],
-                    )
+                    ),
+                    SizedBox(height: 200,),
+
+                    ProgressBar(stepVal: 4)
+
                   ],
                 ),
               ),
             ),
             SizedBox(
               height: 30,
-            )
+            ),
           ],
         ),
       ),

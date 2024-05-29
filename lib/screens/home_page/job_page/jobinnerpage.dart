@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/contact_information.dart';
-import 'package:seclob_pro/screens/home_page/job_page/uploadResume.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/uploadResume.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
 import '../../../resources/color.dart';
 

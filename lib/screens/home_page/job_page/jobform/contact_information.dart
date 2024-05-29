@@ -4,8 +4,9 @@ import 'package:seclob_pro/resources/color.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/experience_details.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:seclob_pro/screens/home_page/job_page/uploadResume.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/uploadResume.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
+import 'package:seclob_pro/widgets/application_progress.dart';
 
 class ContactInformation extends StatefulWidget {
   const ContactInformation({super.key});
@@ -273,7 +274,9 @@ class _ContactInformationState extends State<ContactInformation> {
                               ),
                             ),
                       ],
-                    )
+                    ),
+                    SizedBox(height: 100,),
+                    ProgressBar(stepVal: 1)
                   ],
                 ),
               ),

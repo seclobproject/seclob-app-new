@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seclob_pro/resources/color.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/questions.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
+import 'package:seclob_pro/widgets/application_progress.dart';
 
 class ApplicationOverview extends StatefulWidget {
   const ApplicationOverview({super.key});
@@ -297,7 +299,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                               onTap: (){
                                 // Navigator.push(
                                 //   context,
-                                //   MaterialPageRoute(builder: (context) => ApplicationOverview()),
+                                //   MaterialPageRoute(builder: (context) => QuestionsScreen()),
                                 // );
                               },
                               child: Container(
@@ -311,6 +313,9 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                                 child: Center(child: Text("Submit your application",style: TextStyle(fontSize: 10,color: bg1),)),
                               ),
                             ),
+
+                            SizedBox(height: 20,),
+                            ProgressBar(stepVal: 5)
               
             ],
           ),
