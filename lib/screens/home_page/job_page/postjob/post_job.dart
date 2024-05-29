@@ -108,7 +108,8 @@ class _postjobState extends State<postjob> {
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     border: Border.all(
                       width: 0.5,
-                      color: textColor1,)
+                      color: textColor1,),
+                      color: Colors.grey[100]
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
@@ -143,7 +144,7 @@ class _postjobState extends State<postjob> {
                                   hintStyle: TextStyle(
                                       color: Colors.grey.withOpacity(0.6),
                                       fontSize: 12
-                                  )
+                                  ),
                               ),
                               onChanged: (text){
 
@@ -928,15 +929,15 @@ class _postjobState extends State<postjob> {
                           );
                         },
                         child: Align(
-                          alignment: Alignment.bottomRight,
+                          alignment: Alignment.bottomCenter,
                           child: Container(
                             height: 40,
-                            width: 100,
+                            width: double.infinity,
                             decoration: BoxDecoration(
                                 color: bluetext,
                                 borderRadius: BorderRadius.all(Radius.circular(10))
                             ),
-                            child: Center(child: Text("Save",
+                            child: Center(child: Text("Next",
                               style: TextStyle(color: bg1,fontSize: 14),)),
                           ),
                         ),

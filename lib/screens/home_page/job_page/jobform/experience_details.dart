@@ -13,7 +13,7 @@ class experiencedetails extends StatefulWidget {
 
 class _experiencedetailsState extends State<experiencedetails> {
   int selectedChip = 0;
-  List<String> options = ['Experienced', 'Fresher', 'Student'];
+  List<String> options = ['Experienced', 'Fresher', 'Student','Freelancer'];
 
   bool _checkbox = true;
 
@@ -637,31 +637,57 @@ class _experiencedetailsState extends State<experiencedetails> {
                           ],
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
+
+
+
+
+
+                                            Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          GestureDetector(
+                            onTap: (){
+                          Navigator.pop(context);
+                        },
+                            child: Container(
+                              height: 40,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                color: colorwhite,
+                                border: Border.all(width: 1,color: textgray),
+                                borderRadius: BorderRadius.all(Radius.circular(10))
+                              ),
+                              child: Center(
+                                  child: Text("Back",style: TextStyle(fontSize: 15,color: textgray),)),
+                            ),
+                          ),
+                          SizedBox(width: 10,),
+                          GestureDetector(
+                            onTap: (){
+
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const jobdetails()),
                           );
                         },
-                        child: Align(
-                          alignment: Alignment.bottomRight,
-                          child: Container(
-                            height: 40,
-                            width: 100,
-                            decoration: BoxDecoration(
-                                color: bluetext,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: Center(
-                                child: Text(
-                              "Next",
-                              style: TextStyle(color: bg1, fontSize: 14),
-                            )),
+
+                            child: Container(
+                              height: 40,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                color: buttoncolor,
+                                borderRadius: BorderRadius.all(Radius.circular(10))
+                              ),
+                              child: Center(
+                                  child: Text("Next",style: TextStyle(fontSize: 15,color: bg1),)),
+                            ),
+
                           ),
-                        ),
+                        ],
                       )
+
+
                     ],
                   ),
                 ),
