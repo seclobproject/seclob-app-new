@@ -144,7 +144,7 @@ class _loginpageState extends State<loginpage> {
                       color: Colors.white,
                     ),
                   )
-                      : Text('Sign Up'),
+                      : Text('Sign Up', style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     setState(() {
                       // login();

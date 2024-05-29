@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:seclob_pro/screens/employer/widget/appbar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/success_screen.dart';
+import 'package:seclob_pro/widgets/appbar_common.dart';
 
 import '../../resources/color.dart';
 import 'employe id step 4.dart';
@@ -18,21 +20,7 @@ class _Employer_id7State extends State<Employer_id7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          automaticallyImplyLeading: false,
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xff034B76),
-                  Color(0xff0578BE)
-                ], // Your gradient colors
-              ),
-            ),
-          ),
-          title: MyAppBar()),
+      appBar: JobAppbar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
@@ -718,13 +706,13 @@ class _Employer_id7State extends State<Employer_id7> {
             Row(
               children: [
                 InkWell(
-                  // onTap: () {
-                  //   Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //         builder: (context) => Employer_id4(),
-                  //       ));
-                  // },
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SuccessScreen(),
+                        ));
+                  },
                   child: Container(
                     height: 39,
                     width: 190,

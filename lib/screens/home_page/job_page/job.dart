@@ -1120,99 +1120,99 @@ class _jobState extends State<job> {
 
     // Post job & Employer
 
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      bottomNavigationBar: Container(
-        height: 100,
-        decoration: BoxDecoration(
-          color: backgroundpro,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      width: 190,
-                      height: 47,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => postjob()),
-                          );
-                        },
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              'assets/svg/jobicon.svg',
-                              height: 15,
-                              width: 15,
-                            ),
-                            SizedBox(
-                              height: 3,
-                            ),
-                            const Text('Post a job',
-                                style: TextStyle(fontSize: 10)),
-                          ],
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: bordergreen,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 125,
-                      height: 47,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => jobhome()),
-                          );
-                        },
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              'assets/svg/searchemploye.svg',
-                              height: 18,
-                              width: 18,
-                            ),
-                            SizedBox(
-                              height: 3,
-                            ),
-                            const Text(
-                              'Employer',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: bordergreen,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // bottomNavigationBar: Container(
+      //   height: 100,
+      //   decoration: BoxDecoration(
+      //     color: backgroundpro,
+      //   ),
+      //   child: Padding(
+      //     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      //     child: Column(
+      //       children: [
+      //         Padding(
+      //           padding: const EdgeInsets.symmetric(horizontal: 20),
+      //           child: Row(
+      //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //             children: [
+      //               Container(
+      //                 width: 190,
+      //                 height: 47,
+      //                 child: ElevatedButton(
+      //                   onPressed: () {
+      //                     Navigator.push(
+      //                       context,
+      //                       MaterialPageRoute(builder: (context) => postjob()),
+      //                     );
+      //                   },
+      //                   child: Column(
+      //                     mainAxisAlignment: MainAxisAlignment.center,
+      //                     children: [
+      //                       SvgPicture.asset(
+      //                         'assets/svg/jobicon.svg',
+      //                         height: 15,
+      //                         width: 15,
+      //                       ),
+      //                       SizedBox(
+      //                         height: 3,
+      //                       ),
+      //                       const Text('Post a job',
+      //                           style: TextStyle(fontSize: 10)),
+      //                     ],
+      //                   ),
+      //                   style: ElevatedButton.styleFrom(
+      //                     backgroundColor: bordergreen,
+      //                     shape: RoundedRectangleBorder(
+      //                       borderRadius: BorderRadius.circular(10),
+      //                     ),
+      //                   ),
+      //                 ),
+      //               ),
+      //               SizedBox(
+      //                 width: 5,
+      //               ),
+      //               Container(
+      //                 width: 125,
+      //                 height: 47,
+      //                 child: ElevatedButton(
+      //                   onPressed: () {
+      //                     Navigator.push(
+      //                       context,
+      //                       MaterialPageRoute(builder: (context) => jobhome()),
+      //                     );
+      //                   },
+      //                   child: Column(
+      //                     mainAxisAlignment: MainAxisAlignment.center,
+      //                     children: [
+      //                       SvgPicture.asset(
+      //                         'assets/svg/searchemploye.svg',
+      //                         height: 18,
+      //                         width: 18,
+      //                       ),
+      //                       SizedBox(
+      //                         height: 3,
+      //                       ),
+      //                       const Text(
+      //                         'Employer',
+      //                         style: TextStyle(fontSize: 10),
+      //                       ),
+      //                     ],
+      //                   ),
+      //                   style: ElevatedButton.styleFrom(
+      //                     backgroundColor: bordergreen,
+      //                     shape: RoundedRectangleBorder(
+      //                       borderRadius: BorderRadius.circular(10),
+      //                     ),
+      //                   ),
+      //                 ),
+      //               ),
+      //             ],
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
     );
   }
 }

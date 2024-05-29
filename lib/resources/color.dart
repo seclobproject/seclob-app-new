@@ -33,6 +33,7 @@ const Color background = Color.fromRGBO(249, 249, 249, 1);
 const Color background1 = Color.fromRGBO(252, 252, 252, 1);
 
 const Color borderColor1 = Color.fromRGBO(0, 0, 0, 0.08);
+const Color borderGrey = Color.fromRGBO(200, 200, 200, 1);
 
 const Color line = Color.fromRGBO(224, 220, 220, 1);
 const Color greenpermanat = Color.fromRGBO(11, 36, 251, 1);

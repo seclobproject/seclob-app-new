@@ -98,7 +98,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                     Container(
                       decoration: BoxDecoration(
                           border: Border.all(
-                            color: textColor,
+                            color: borderGrey,
                             width: 0.5,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10))),

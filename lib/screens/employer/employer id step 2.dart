@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seclob_pro/screens/employer/widget/appbar.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:seclob_pro/widgets/appbar_common.dart';
 
 import '../../resources/color.dart';
 import 'employer id step 3.dart';
@@ -34,22 +35,7 @@ class _Employer_id2State extends State<Employer_id2> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0xff034B76),
-                Color(0xff0578BE)
-              ], // Your gradient colors
-            ),
-          ),
-        ),
-        title: MyAppBar(),
-      ),
+      appBar: JobAppbar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seclob_pro/screens/employ/success.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/success_screen.dart';
 import '../../../../resources/color.dart';
 
 class Social_media extends StatefulWidget {
@@ -300,7 +301,7 @@ class _Social_mediaState extends State<Social_media> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Success(),
+                                    builder: (context) => SuccessScreen(),
                                   ));
                             },
                             child: Container(

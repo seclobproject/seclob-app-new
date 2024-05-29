@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:seclob_pro/screens/employer/widget/appbar.dart';
+import 'package:seclob_pro/widgets/appbar_common.dart';
 
 import '../../resources/color.dart';
 import 'employer id step 2.dart';
@@ -18,20 +19,7 @@ class _Employer_idState extends State<Employer_id> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xff034B76),
-                  Color(0xff0578BE)
-                ], // Your gradient colors
-              ),
-            ),
-          ),
-          title: MyAppBar()),
+      appBar: JobAppbar(),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
         child: ListView(

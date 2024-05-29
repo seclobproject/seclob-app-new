@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:seclob_pro/screens/employer/employer%20id.dart';
 import 'package:seclob_pro/screens/home_page/service/service_inner_page.dart';
 import 'package:seclob_pro/screens/home_page/service/service_page.dart';
 import 'package:seclob_pro/screens/home_page/vehile_service/vechile_page.dart';
@@ -252,7 +253,9 @@ class _homeState extends State<home> {
               height: 20,
             ),
 
-            Text('test'),
+            GestureDetector(
+              onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Employer_id()));},
+              child: Text('test')),
 
             SizedBox(
               height: 20,

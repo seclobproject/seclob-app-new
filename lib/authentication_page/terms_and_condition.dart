@@ -73,6 +73,15 @@ class _TermsAndConditionsPageState extends State<TermsAndConditionsPage> {
               height: 48,
               width: 650,
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        Color.fromRGBO(2, 109, 169, 1)),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
                 onPressed: _isChecked
                     ? () {
                   Navigator.push(

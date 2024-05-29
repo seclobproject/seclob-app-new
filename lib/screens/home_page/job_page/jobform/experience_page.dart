@@ -77,7 +77,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                     Container(
                       decoration: BoxDecoration(
                           border: Border.all(
-                            color: textColor,
+                            color: borderGrey,
                             width: 0.5,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -109,7 +109,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                       height: 45,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: textgray),
+                        border: Border.all(color: borderGrey),
                         color: Colors.white,
                       ),
                       child: Padding(
@@ -127,7 +127,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                                 item,
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 16), // Adjust text style
+                                    fontSize: 12), // Adjust text style
                               ),
                             );
                           }).toList(),
@@ -153,7 +153,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                     Container(
                       decoration: BoxDecoration(
                           border: Border.all(
-                            color: textColor,
+                            color: borderGrey,
                             width: 0.5,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10))),

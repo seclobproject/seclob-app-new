@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seclob_pro/resources/color.dart';
 
 import 'authentication_page/splash_screen.dart';
 import 'navigation/bottom_tabs_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        scaffoldBackgroundColor: bg
       ),
       home:  MyHomePage(),
     );

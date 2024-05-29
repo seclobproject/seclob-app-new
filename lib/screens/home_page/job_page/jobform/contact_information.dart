@@ -64,7 +64,7 @@ class _ContactInformationState extends State<ContactInformation> {
                     Container(
                       decoration: BoxDecoration(
                           border: Border.all(
-                            color: textColor,
+                            color: borderGrey,
                             width: 0.5,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -95,7 +95,7 @@ class _ContactInformationState extends State<ContactInformation> {
                     Container(
                       decoration: BoxDecoration(
                           border: Border.all(
-                            color: textColor,
+                            color: borderGrey,
                             width: 0.5,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -125,8 +125,24 @@ class _ContactInformationState extends State<ContactInformation> {
                     ),
                     IntlPhoneField(
                       decoration: InputDecoration(
+                        contentPadding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.black),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        hintText: 'Enter yourPhone number',
+                        hintStyle: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13,
+                            color: Color(0xffC8C8C8)),
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(color: greytext),
+                          borderSide: BorderSide(),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(color: Color(0xffDCDCDC)),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                       initialCountryCode: 'IN',
@@ -148,22 +164,21 @@ class _ContactInformationState extends State<ContactInformation> {
                                 style: TextStyle(
                                     fontSize: 12, fontWeight: FontWeight.w500),
                               ),
-                              SizedBox(
-                                height: 10,
-                              ),
+                              SizedBox(height: 10),
                               Container(
                                 alignment: Alignment.center,
-                                width: 133,
-                                height: 43,
+                                width: double.infinity,
+                                height: 40,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Colors.grey[200],
-                                  border: Border.all(color: textgrey1)
-                                  
+                                  border: Border.all(color: borderGrey),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 5),
                                   child: DropdownButton(
+                                    underline: Container(),
                                     isExpanded: true,
                                     borderRadius: BorderRadius.circular(10),
                                     elevation: 0,
@@ -175,9 +190,10 @@ class _ContactInformationState extends State<ContactInformation> {
                                         child: Text(
                                           item,
                                           style: TextStyle(
-                                              color: textgrey1,
-                                              fontSize:
-                                                  10), // Set text color to black
+                                            color: textgrey1,
+                                            fontSize:
+                                                10, // Set text color to black (optional)
+                                          ),
                                         ),
                                       );
                                     }).toList(),
@@ -192,7 +208,9 @@ class _ContactInformationState extends State<ContactInformation> {
                             ],
                           ),
                         ),
-                        Spacer(),
+                        SizedBox(
+                            width:
+                                20), // Spacer replaced with SizedBox for specific width
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,22 +220,21 @@ class _ContactInformationState extends State<ContactInformation> {
                                 style: TextStyle(
                                     fontSize: 12, fontWeight: FontWeight.w500),
                               ),
-                              SizedBox(
-                                height: 10,
-                              ),
+                              SizedBox(height: 10),
                               Container(
                                 alignment: Alignment.center,
-                                width: 133,
+                                width: double.infinity,
                                 height: 43,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Colors.grey[200],
-                                  border: Border.all(color: textgrey1)
-                                  
+                                  border: Border.all(color: textgrey1),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 5),
                                   child: DropdownButton(
+                                    underline: Container(),
                                     isExpanded: true,
                                     borderRadius: BorderRadius.circular(10),
                                     elevation: 0,
@@ -229,9 +246,10 @@ class _ContactInformationState extends State<ContactInformation> {
                                         child: Text(
                                           item,
                                           style: TextStyle(
-                                              color: textgrey1,
-                                              fontSize:
-                                                  10), // Set text color to black
+                                            color: textgrey1,
+                                            fontSize:
+                                                10, // Set text color to black (optional)
+                                          ),
                                         ),
                                       );
                                     }).toList(),
@@ -245,44 +263,48 @@ class _ContactInformationState extends State<ContactInformation> {
                               ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
-
-
                     SizedBox(height: 20),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                              onTap: (){
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => uploadresume()),
-                                );
-                              },
-                              child: Container(
-                                height: 40,
-                                width: 85,
-                                decoration: BoxDecoration(
-                                  color: blue1,
-                                    border: Border.all(color: bordercolor),
-                                    borderRadius: BorderRadius.all(Radius.circular(5))
-                                ),
-                                child: Center(child: Text("Continue",style: TextStyle(fontSize: 10,color: bg1),)),
-                              ),
-                            ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => uploadresume()),
+                            );
+                          },
+                          child: Container(
+                            height: 40,
+                            width: 85,
+                            decoration: BoxDecoration(
+                                color: blue1,
+                                border: Border.all(color: bordercolor),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
+                            child: Center(
+                                child: Text(
+                              "Continue",
+                              style: TextStyle(fontSize: 10, color: bg1),
+                            )),
+                          ),
+                        ),
                       ],
                     ),
-                    SizedBox(height: 150,),
+                    SizedBox(
+                      height: 200,
+                    ),
                     ProgressBar(stepVal: 1)
                   ],
                 ),
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 10,
             )
           ],
         ),

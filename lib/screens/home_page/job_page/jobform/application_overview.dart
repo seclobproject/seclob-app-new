@@ -315,7 +315,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                               ),
                             ),
 
-                            SizedBox(height: 20,),
+                            SizedBox(height: 10),
                             ProgressBar(stepVal: 5)
               
             ],

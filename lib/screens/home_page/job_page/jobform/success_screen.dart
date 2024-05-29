@@ -18,23 +18,28 @@ class _SuccessScreenState extends State<SuccessScreen> {
     return Scaffold(
       backgroundColor: Colors.white, // Background color
       body: Center(
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: <Color>[Color.fromRGBO(2, 67, 106, 1), Color.fromRGBO(2, 82, 131, 1)]),
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30))
-              ),
-              
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: <Color>[
+                        Color.fromRGBO(2, 67, 106, 1),
+                        Color.fromRGBO(2, 82, 131, 1)
+                      ]),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30))
+                      ),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     Align(
                       alignment: Alignment.centerLeft,
@@ -75,13 +80,15 @@ class _SuccessScreenState extends State<SuccessScreen> {
                     SizedBox(height: 50),
                     ElevatedButton(
                       onPressed: () {
-                        // Add navigation back to job search functionality
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>job()));
+                        Navigator.of(context)
+                            .popUntil((route) => route.isFirst);
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => job()));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 15),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -91,17 +98,23 @@ class _SuccessScreenState extends State<SuccessScreen> {
                         style: TextStyle(fontSize: 16, color: Colors.white),
                       ),
                     ),
-                    SizedBox(height: 100,)
+                    SizedBox(
+                      height: 100,
+                    )
                   ]),
             ),
-            SizedBox(height: 150),
-            Text(
-              'Look over your email for the details',
-              style: TextStyle(
-                color: Colors.green,
-                fontSize: 16,
-              ),
-            ),
+            SizedBox(height: 50,),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Look over your email for the details',
+                  style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 16,
+                  ),
+                ),
+              
             SizedBox(height: 10),
             Text(
               'Much Obliged!!',
@@ -110,6 +123,8 @@ class _SuccessScreenState extends State<SuccessScreen> {
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            ],
             ),
           ],
         ),
