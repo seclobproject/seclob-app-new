@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:seclob_pro/resources/color.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/experience_details.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:seclob_pro/screens/home_page/job_page/uploadResume.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
 
 class ContactInformation extends StatefulWidget {
@@ -13,6 +15,10 @@ class ContactInformation extends StatefulWidget {
 }
 
 class _ContactInformationState extends State<ContactInformation> {
+  String Districtdropdownvalue = ' Kozhikode';
+  String Statedropdownvalue = 'Kerala';
+  var Districtitems = [' Kozhikode', 'Ernakulam', 'Thrissur'];
+  var Stateitems = ['Kerala', 'Tamil Nadu', 'New Delhi'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,44 +26,47 @@ class _ContactInformationState extends State<ContactInformation> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-
             SizedBox(
               height: 20,
             ),
-
-
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20,),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+              ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      child: Text("Add your contact information",
-                        style: TextStyle(fontSize: 16,
+                      child: Text(
+                        "Add your contact information",
+                        style: TextStyle(
+                            fontSize: 16,
                             fontWeight: FontWeight.w600,
-                            color: buttonGreen),),
-                    ),
-              
-                    SizedBox(height: 10,),
-              
-              
-                    Text("Name",style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),),
-                    SizedBox(height: 5,),
-              
-                    Container(
-              
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: textColor,
-                          width: 0.5,
-              
-                        ),
-                        borderRadius: BorderRadius.all(Radius.circular(10))
-              
+                            color: buttonGreen),
                       ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Name",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: textColor,
+                            width: 0.5,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: TextField(
@@ -67,32 +76,28 @@ class _ContactInformationState extends State<ContactInformation> {
                               hintText: "Enter your name ....",
                               hintStyle: TextStyle(
                                   color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
+                                  fontSize: 12)),
+                          onChanged: (text) {},
                         ),
                       ),
                     ),
-              
-                    SizedBox(height: 20,),
-              
-                    Text("Email",style: TextStyle(fontSize: 12),),
-                    SizedBox(height: 5,),
-              
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Email",
+                      style: TextStyle(fontSize: 12),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
-              
                       decoration: BoxDecoration(
                           border: Border.all(
                             color: textColor,
                             width: 0.5,
-              
                           ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-              
-                      ),
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: TextField(
@@ -102,285 +107,183 @@ class _ContactInformationState extends State<ContactInformation> {
                               hintText: "Enter your email ...",
                               hintStyle: TextStyle(
                                   color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
+                                  fontSize: 12)),
+                          onChanged: (text) {},
                         ),
                       ),
                     ),
-              
-                    SizedBox(height: 10,),
-              
-                    Text("Phone Number",style: TextStyle(fontSize: 12),),
-                    SizedBox(height: 10,),
-              
-                    Container(
-              
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: textColor,
-                            width: 0.5,
-              
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-              
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: TextField(
-                          textAlign: TextAlign.start, // <-- Main change here
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Phone Number",
-                              hintStyle: TextStyle(
-                                  color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Phone Number",
+                      style: TextStyle(fontSize: 12),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    IntlPhoneField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: greytext),
                         ),
                       ),
+                      initialCountryCode: 'IN',
+                      onChanged: (phone) {
+                        print(phone.completeNumber);
+                      },
                     ),
-              
-                    SizedBox(height: 10,),
-              
-                    Text("Email",style: TextStyle(fontSize: 12),),
-                    SizedBox(height: 10,),
-              
-                    Container(
-              
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: textColor,
-                            width: 0.5,
-              
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-              
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: TextField(
-                          textAlign: TextAlign.start, // <-- Main change here
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Email",
-                              hintStyle: TextStyle(
-                                  color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
-                        ),
-                      ),
+                    SizedBox(
+                      height: 5,
                     ),
-              
-              
-              
-                    SizedBox(height: 10,),
-              
-                    Text("District",style: TextStyle(fontSize: 12),),
-                    SizedBox(height: 10,),
-              
-                    Container(
-              
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: textColor,
-                            width: 0.5,
-              
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-              
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: TextField(
-                          textAlign: TextAlign.start, // <-- Main change here
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "All Location",
-                              hintStyle: TextStyle(
-                                  color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
-                        ),
-                      ),
-                    ),
-              
-              
-                    SizedBox(height: 10,),
-              
-                    Text("Gender",style: TextStyle(fontSize: 12),),
-                    SizedBox(height: 10,),
-              
-                    Container(
-              
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: textColor,
-                            width: 0.5,
-              
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-              
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: TextField(
-                          textAlign: TextAlign.start, // <-- Main change here
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Male or Female",
-                              hintStyle: TextStyle(
-                                  color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
-                        ),
-                      ),
-                    ),
-              
-              
-                    SizedBox(height: 10,),
-              
-                    Text("Job Tittle",style: TextStyle(fontSize: 12),),
-                    SizedBox(height: 10,),
-              
-                    Container(
-              
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: textColor,
-                            width: 0.5,
-              
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-              
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: TextField(
-                          textAlign: TextAlign.start, // <-- Main change here
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Job Tittle",
-                              hintStyle: TextStyle(
-                                  color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
-                        ),
-                      ),
-                    ),
-              
-              
-                    SizedBox(height: 10,),
-              
-                    Text("Skill",style: TextStyle(fontSize: 12),),
-                    SizedBox(height: 10,),
-              
-                    Container(
-              
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                            color: textColor,
-                            width: 0.5,
-              
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-              
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: TextField(
-                          textAlign: TextAlign.start, // <-- Main change here
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Skill",
-                              hintStyle: TextStyle(
-                                  color: Colors.grey.withOpacity(0.6),
-                                  fontSize: 12
-                              )
-                          ),
-                          onChanged: (text){
-              
-                          },
-                        ),
-                      ),
-                    ),
-              
-                    SizedBox(height: 30,),
-              
-              
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "State",
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.w500),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                width: 133,
+                                height: 43,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.grey[200],
+                                  border: Border.all(color: textgrey1)
+                                  
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                                  child: DropdownButton(
+                                    isExpanded: true,
+                                    borderRadius: BorderRadius.circular(10),
+                                    elevation: 0,
+                                    value: Statedropdownvalue,
+                                    icon: Icon(Icons.keyboard_arrow_down),
+                                    items: Stateitems.map((String item) {
+                                      return DropdownMenuItem(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: TextStyle(
+                                              color: textgrey1,
+                                              fontSize:
+                                                  10), // Set text color to black
+                                        ),
+                                      );
+                                    }).toList(),
+                                    onChanged: (String? newValue) {
+                                      setState(() {
+                                        Statedropdownvalue = newValue!;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Spacer(),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "District",
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.w500),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                width: 133,
+                                height: 43,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.grey[200],
+                                  border: Border.all(color: textgrey1)
+                                  
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                                  child: DropdownButton(
+                                    isExpanded: true,
+                                    borderRadius: BorderRadius.circular(10),
+                                    elevation: 0,
+                                    value: Districtdropdownvalue,
+                                    icon: Icon(Icons.keyboard_arrow_down),
+                                    items: Districtitems.map((String item) {
+                                      return DropdownMenuItem(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: TextStyle(
+                                              color: textgrey1,
+                                              fontSize:
+                                                  10), // Set text color to black
+                                        ),
+                                      );
+                                    }).toList(),
+                                    onChanged: (String? newValue) {
+                                      setState(() {
+                                        Districtdropdownvalue = newValue!;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+
+
+                    SizedBox(height: 20),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                          onTap: (){
-                        Navigator.pop(context);
-                      },
-                          child: Container(
-                            height: 40,
-                            width: 100,
-                            decoration: BoxDecoration(
-                              color: colorwhite,
-                              border: Border.all(width: 1,color: textgray),
-                              borderRadius: BorderRadius.all(Radius.circular(10))
+                              onTap: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => uploadresume()),
+                                );
+                              },
+                              child: Container(
+                                height: 40,
+                                width: 85,
+                                decoration: BoxDecoration(
+                                  color: blue1,
+                                    border: Border.all(color: bordercolor),
+                                    borderRadius: BorderRadius.all(Radius.circular(5))
+                                ),
+                                child: Center(child: Text("Continue",style: TextStyle(fontSize: 10,color: bg1),)),
+                              ),
                             ),
-                            child: Center(
-                                child: Text("Back",style: TextStyle(fontSize: 15,color: textgray),)),
-                          ),
-                        ),
-                        SizedBox(width: 10,),
-                        GestureDetector(
-                          onTap: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const experiencedetails()),
-                        );
-                      },
-                          child: Container(
-                            height: 40,
-                            width: 100,
-                            decoration: BoxDecoration(
-                              color: buttoncolor,
-                              borderRadius: BorderRadius.all(Radius.circular(10))
-                            ),
-                            child: Center(
-                                child: Text("Next",style: TextStyle(fontSize: 15,color: bg1),)),
-                          ),
-                        ),
                       ],
                     )
-              
                   ],
                 ),
               ),
             ),
-
-            SizedBox(height: 30,)
+            SizedBox(
+              height: 30,
+            )
           ],
         ),
       ),
-
     );
   }
 }

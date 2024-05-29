@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/contact_information.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/experience_details.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/experience_page.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
 
 import '../../../resources/color.dart';
@@ -25,7 +27,7 @@ class _uploadresumeState extends State<uploadresume> {
 
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: Column(
@@ -80,14 +82,14 @@ class _uploadresumeState extends State<uploadresume> {
                               onTap: (){
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => ContactInformation()),
+                                  MaterialPageRoute(builder: (context) => ExpreiencePage()),
                                 );
                               },
                               child: Container(
-                                height: 30,
-                                width: 75,
+                                height: 40,
+                                width: 85,
                                 decoration: BoxDecoration(
-                                  color: bordergreen,
+                                  color: blue1,
                                     border: Border.all(color: bordercolor),
                                     borderRadius: BorderRadius.all(Radius.circular(5))
                                 ),
