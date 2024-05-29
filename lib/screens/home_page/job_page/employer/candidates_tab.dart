@@ -10,6 +10,7 @@ class candidates extends StatefulWidget {
 
 class _candidatesState extends State<candidates> {
   String selectedChoice = '';
+  Color activeColor = greytext;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class _candidatesState extends State<candidates> {
           children: <Widget>[
             SizedBox(height: 10,),
             Wrap(
-              spacing: 15,
+              spacing: 10,
               children: _buildChoiceList(),
             ),
 
@@ -70,6 +71,7 @@ class _candidatesState extends State<candidates> {
                                       width: 25,
                                       height: 25,
                                       fit: BoxFit.scaleDown,
+                                      
                                     ),
                                   )
                                 ],
@@ -112,7 +114,7 @@ class _candidatesState extends State<candidates> {
                                 width: 81,
                                 decoration: BoxDecoration(
                                     color: chipcolor1,
-                                    borderRadius: BorderRadius.all(Radius.circular(5))
+                                    borderRadius: BorderRadius.all(Radius.circular(10))
                                 ),
                                 child: Center(child: Text("Waiting Review",style: TextStyle(fontSize: 8),)),
                               ),
@@ -124,85 +126,14 @@ class _candidatesState extends State<candidates> {
                                 width: 81,
                                 decoration: BoxDecoration(
                                     color: chipcolor1,
-                                    borderRadius: BorderRadius.all(Radius.circular(5))
+                                    borderRadius: BorderRadius.all(Radius.circular(8))
                                 ),
                                 child: Center(child: Text("M com",style: TextStyle(fontSize: 8),)),
                               ),
 
                               SizedBox(height: 5,),
 
-                              Row(
-                                children: [
-
-                                  Text("Applied : 11 November",style: TextStyle(fontSize: 8),),
-
-                                  SizedBox(width: 10,),
-
-                                  Container(
-                                    height: 20,
-                                    width: 80,
-                                    decoration: BoxDecoration(
-                                        color: chipcolor1,
-                                        borderRadius: BorderRadius.all(Radius.circular(5))),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.timer,
-                                          color: Colors.grey,
-                                          size: 10,
-                                        ),
-                                        SizedBox(width: 5,),
-                                        Text("Invite to Interview",style: TextStyle(fontSize: 7),),
-                                      ],
-                                    ),
-                                  ),
-
-                                  SizedBox(width: 5,),
-
-                                  Container(
-                                    height: 20,
-                                    width: 55,
-                                    decoration: BoxDecoration(
-                                        color: bluetext,
-                                        borderRadius: BorderRadius.all(Radius.circular(5))),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.sms,
-                                          color: Colors.white,
-                                          size: 10,
-                                        ),
-                                        SizedBox(width: 5,),
-                                        Text("Message",style: TextStyle(fontSize: 7,color: bg1),),
-                                      ],
-                                    ),
-                                  ),
-
-                                  SizedBox(width: 5,),
-                                  Container(
-                                    height: 20,
-                                    width: 55,
-                                    decoration: BoxDecoration(
-                                        color: bluetext,
-                                        borderRadius: BorderRadius.all(Radius.circular(5))),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.call,
-                                          color: Colors.white,
-                                          size: 10,
-                                        ),
-                                        SizedBox(width: 5,),
-                                        Text("Call",style: TextStyle(fontSize: 7,color: bg1),),
-                                      ],
-                                    ),
-                                  )
-
-                                ],
-                              ),
+                              Text("Applied : 11 November",style: TextStyle(fontSize: 8),),
 
                               SizedBox(height: 10,)
                             ],
@@ -228,18 +159,22 @@ class _candidatesState extends State<candidates> {
     return choices.map((String choice) {
       return ChoiceChip(
         backgroundColor: Colors.transparent,
+        selectedColor: Colors.transparent,
         label: Text(choice),
+        labelStyle: TextStyle( color: selectedChoice == choice ? blue : textgray),
         selected: selectedChoice == choice,
         onSelected: (bool selected) {
           setState(() {
             selectedChoice = selected ? choice : '';
+            
           });
         },
         shape: RoundedRectangleBorder(
           side: BorderSide(
-            color: greytext, // Change this color to your desired gray color, // Adjust the width as needed
+             color: selectedChoice == choice ? blue : textgray, // Change this color to your desired gray color, // Adjust the width as needed
           ),
-          borderRadius: BorderRadius.circular(10), // Adjust the border radius as needed
+          borderRadius: BorderRadius.circular(20),
+           // Adjust the border radius as needed
         ),
       );
     }).toList();
