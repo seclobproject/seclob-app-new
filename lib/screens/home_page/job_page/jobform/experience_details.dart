@@ -12,7 +12,6 @@ class experiencedetails extends StatefulWidget {
 }
 
 class _experiencedetailsState extends State<experiencedetails> {
-
   int selectedChip = 0;
   List<String> options = ['Experienced', 'Fresher', 'Student','Freelancer'];
 
@@ -20,11 +19,10 @@ class _experiencedetailsState extends State<experiencedetails> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-
             SizedBox(
               height: 20,
             ),
@@ -65,7 +63,7 @@ class _experiencedetailsState extends State<experiencedetails> {
                             blurRadius: 0, // shadow radius
                             offset: Offset(0, .1), // shadow offset
                             spreadRadius:
-                            0, // The amount the box should be inflated prior to applying the blur
+                                0, // The amount the box should be inflated prior to applying the blur
                             // set blur style
                           ),
                         ],
@@ -103,8 +101,6 @@ class _experiencedetailsState extends State<experiencedetails> {
                 ],
               ),
             ),
-
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
@@ -113,20 +109,22 @@ class _experiencedetailsState extends State<experiencedetails> {
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     border: Border.all(
                       width: 0.5,
-                      color: textColor1,)
-                ),
+                      color: textColor1,
+                    )),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Wrap(
                         spacing: 12,
                         children: List<Widget>.generate(
                           options.length,
-                              (int index) {
+                          (int index) {
                             return ChoiceChip(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
@@ -143,15 +141,17 @@ class _experiencedetailsState extends State<experiencedetails> {
                                     width: 5,
                                     decoration: BoxDecoration(
                                         color: bg1,
-                                        borderRadius: BorderRadius.all(Radius.circular(100))
-                                    ),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(100))),
                                   ),
                                 ),
                               ),
                               label: Text(
                                 options[index],
                                 style: TextStyle(
-                                  color: selectedChip == index ? Colors.white : textColor, // Change text color when selected
+                                  color: selectedChip == index
+                                      ? Colors.white
+                                      : textColor, // Change text color when selected
                                   fontSize: 10,
                                 ),
                               ),
@@ -165,166 +165,158 @@ class _experiencedetailsState extends State<experiencedetails> {
                           },
                         ).toList(),
                       ),
-
-                      SizedBox(height: 10,),
-
+                      SizedBox(
+                        height: 10,
+                      ),
                       Visibility(
                         visible: selectedChip == 0,
-                        child:  Column(
+                        child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Company Name ",style: TextStyle(fontSize: 12),),
-
-                            SizedBox(height: 10,),
-
+                            Text(
+                              "Company Name ",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Company Name ",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-                            SizedBox(height: 10,),
-
-                            Text("Employer Location",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Employer Location",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Employer Location",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-
-
-                            SizedBox(height: 10,),
-
-                            Text("Company Designation",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Company Designation",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Company Designation",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-                            SizedBox(height: 10,),
-
-                            Text("Roles",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Roles",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Roles",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-                            SizedBox(height: 10,),
-
-                            Text("From",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "From",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Row(
                               children: [
                                 Container(
@@ -334,29 +326,28 @@ class _experiencedetailsState extends State<experiencedetails> {
                                         color: textColor,
                                         width: 0.5,
                                       ),
-                                      borderRadius: BorderRadius.all(Radius.circular(10))
-                                  ),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
                                     child: TextField(
-                                      textAlign: TextAlign.start, // <-- Main change here
+                                      textAlign: TextAlign
+                                          .start, // <-- Main change here
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Month",
                                           hintStyle: TextStyle(
-                                              color: Colors.grey.withOpacity(0.6),
-                                              fontSize: 12
-                                          )
-                                      ),
-                                      onChanged: (text){
-
-                                      },
+                                              color:
+                                                  Colors.grey.withOpacity(0.6),
+                                              fontSize: 12)),
+                                      onChanged: (text) {},
                                     ),
                                   ),
                                 ),
-
-                                SizedBox(width:10 ,),
-
+                                SizedBox(
+                                  width: 10,
+                                ),
                                 Container(
                                   width: 150,
                                   decoration: BoxDecoration(
@@ -364,37 +355,37 @@ class _experiencedetailsState extends State<experiencedetails> {
                                         color: textColor,
                                         width: 0.5,
                                       ),
-                                      borderRadius: BorderRadius.all(Radius.circular(10))
-                                  ),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
                                     child: TextField(
-                                      textAlign: TextAlign.start, // <-- Main change here
+                                      textAlign: TextAlign
+                                          .start, // <-- Main change here
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Month",
                                           hintStyle: TextStyle(
-                                              color: Colors.grey.withOpacity(0.6),
-                                              fontSize: 12
-                                          )
-                                      ),
-                                      onChanged: (text){
-
-                                      },
+                                              color:
+                                                  Colors.grey.withOpacity(0.6),
+                                              fontSize: 12)),
+                                      onChanged: (text) {},
                                     ),
                                   ),
                                 ),
                               ],
                             ),
-
-
-
-                            SizedBox(height: 10,),
-
-                            Text("To",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "To",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Row(
                               children: [
                                 Container(
@@ -404,29 +395,28 @@ class _experiencedetailsState extends State<experiencedetails> {
                                         color: textColor,
                                         width: 0.5,
                                       ),
-                                      borderRadius: BorderRadius.all(Radius.circular(10))
-                                  ),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
                                     child: TextField(
-                                      textAlign: TextAlign.start, // <-- Main change here
+                                      textAlign: TextAlign
+                                          .start, // <-- Main change here
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Month",
                                           hintStyle: TextStyle(
-                                              color: Colors.grey.withOpacity(0.6),
-                                              fontSize: 12
-                                          )
-                                      ),
-                                      onChanged: (text){
-
-                                      },
+                                              color:
+                                                  Colors.grey.withOpacity(0.6),
+                                              fontSize: 12)),
+                                      onChanged: (text) {},
                                     ),
                                   ),
                                 ),
-
-                                SizedBox(width:10 ,),
-
+                                SizedBox(
+                                  width: 10,
+                                ),
                                 Container(
                                   width: 150,
                                   decoration: BoxDecoration(
@@ -434,164 +424,157 @@ class _experiencedetailsState extends State<experiencedetails> {
                                         color: textColor,
                                         width: 0.5,
                                       ),
-                                      borderRadius: BorderRadius.all(Radius.circular(10))
-                                  ),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
                                     child: TextField(
-                                      textAlign: TextAlign.start, // <-- Main change here
+                                      textAlign: TextAlign
+                                          .start, // <-- Main change here
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Month",
                                           hintStyle: TextStyle(
-                                              color: Colors.grey.withOpacity(0.6),
-                                              fontSize: 12
-                                          )
-                                      ),
-                                      onChanged: (text){
-
-                                      },
+                                              color:
+                                                  Colors.grey.withOpacity(0.6),
+                                              fontSize: 12)),
+                                      onChanged: (text) {},
                                     ),
                                   ),
                                 ),
                               ],
                             ),
-
-
                             CheckboxListTile(
                               activeColor: textcolor,
                               value: _checkbox,
                               onChanged: (value) {
-                                setState(() => _checkbox = !_checkbox);},
-                              title: const Text('I am currently working here', style: TextStyle(color: Colors.black,fontSize: 14),),
+                                setState(() => _checkbox = !_checkbox);
+                              },
+                              title: const Text(
+                                'I am currently working here',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 14),
+                              ),
                             )
-
                           ],
                         ),
-
                       ),
-
                       Visibility(
                         visible: selectedChip == 2,
-                        child:  Column(
+                        child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Education Level",style: TextStyle(fontSize: 12),),
-
-                            SizedBox(height: 10,),
-
+                            Text(
+                              "Education Level",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Education Level",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-                            SizedBox(height: 10,),
-
-                            Text("University / School",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "University / School",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "University / School",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-
-
-                            SizedBox(height: 10,),
-
-                            Text("Degree",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Degree",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Degree",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-                            SizedBox(height: 10,),
-
-                            Text("From",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "From",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
                               width: 150,
                               decoration: BoxDecoration(
@@ -599,67 +582,62 @@ class _experiencedetailsState extends State<experiencedetails> {
                                     color: textColor,
                                     width: 0.5,
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Month",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
-
-                            SizedBox(height: 10,),
-
-                            Text("Specialization",style: TextStyle(fontSize: 12),),
-                            SizedBox(height: 10,),
-
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Specialization",
+                              style: TextStyle(fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Container(
-
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: textColor,
                                     width: 0.5,
-
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
-
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: TextField(
-                                  textAlign: TextAlign.start, // <-- Main change here
+                                  textAlign:
+                                      TextAlign.start, // <-- Main change here
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "Specialization",
                                       hintStyle: TextStyle(
                                           color: Colors.grey.withOpacity(0.6),
-                                          fontSize: 12
-                                      )
-                                  ),
-                                  onChanged: (text){
-
-                                  },
+                                          fontSize: 12)),
+                                  onChanged: (text) {},
                                 ),
                               ),
                             ),
-
                           ],
                         ),
-
                       ),
+
 
 
 
@@ -686,11 +664,14 @@ class _experiencedetailsState extends State<experiencedetails> {
                           SizedBox(width: 10,),
                           GestureDetector(
                             onTap: (){
+
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const jobdetails()),
+                            MaterialPageRoute(
+                                builder: (context) => const jobdetails()),
                           );
                         },
+
                             child: Container(
                               height: 40,
                               width: 100,
@@ -701,10 +682,10 @@ class _experiencedetailsState extends State<experiencedetails> {
                               child: Center(
                                   child: Text("Next",style: TextStyle(fontSize: 15,color: bg1),)),
                             ),
+
                           ),
                         ],
                       )
-
 
 
                     ],
@@ -715,9 +696,6 @@ class _experiencedetailsState extends State<experiencedetails> {
           ],
         ),
       ),
-
     );
   }
 }
-
-
