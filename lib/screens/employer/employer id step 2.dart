@@ -232,7 +232,7 @@ class _Employer_id2State extends State<Employer_id2> {
                     fontSize: 15,
                     color: Colors.black),
                 children: <TextSpan>[
-                  TextSpan(text: "Your company's industry"),
+                  TextSpan(text: "Job title"),
                   TextSpan(
                     text: ' *',
                     style: TextStyle(
@@ -276,7 +276,7 @@ class _Employer_id2State extends State<Employer_id2> {
                     fontSize: 15,
                     color: Colors.black),
                 children: <TextSpan>[
-                  TextSpan(text: "Your company's industry"),
+                  TextSpan(text: "Where will an employee report to work?"),
                   TextSpan(
                     text: ' *',
                     style: TextStyle(
@@ -330,53 +330,7 @@ class _Employer_id2State extends State<Employer_id2> {
                         style: TextStyle(fontSize: 12)),
                   ],
                 )),
-            SizedBox(
-              height: 20,
-            ),
-            RichText(
-              text: TextSpan(
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15,
-                    color: Colors.black),
-                children: <TextSpan>[
-                  TextSpan(text: "Your company's industry"),
-                  TextSpan(
-                    text: ' *',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.red,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              maxLines: null,
-              minLines: 1,
-              decoration: InputDecoration(
-                  fillColor: Colors.white,
-                  filled: true,
-                  hintText: 'Enter your job title...',
-                  hintStyle: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xffD0D0D0)),
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.black),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Color(0xffDCDCDC)),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  border: const OutlineInputBorder()),
-            ),
+
             SizedBox(
               height: 20,
             ),
@@ -459,7 +413,7 @@ class _Employer_id2State extends State<Employer_id2> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Area',
+                      'Pincode',
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 15,

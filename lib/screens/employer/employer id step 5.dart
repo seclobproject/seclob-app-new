@@ -293,7 +293,7 @@ class _Employer_id5State extends State<Employer_id5> {
               height: 20,
             ),
             Text(
-              'Is there an application deadline?',
+              'Communication settings',
               style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 15,
@@ -361,9 +361,9 @@ class _Employer_id5State extends State<Employer_id5> {
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                     child: Center(
                         child: Text(
-                          "Continue",
-                          style: TextStyle(fontSize: 15, color: bg1),
-                        )),
+                      "Continue",
+                      style: TextStyle(fontSize: 15, color: bg1),
+                    )),
                   ),
                 ),
               ],
@@ -392,7 +392,9 @@ class _Employer_id5State extends State<Employer_id5> {
                     color: green, borderRadius: BorderRadius.circular(3)),
               ),
             ]),
-            SizedBox(height: 50,)
+            SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),
