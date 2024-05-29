@@ -275,7 +275,7 @@ class _ContactInformationState extends State<ContactInformation> {
                             ),
                       ],
                     ),
-                    SizedBox(height: 100,),
+                    SizedBox(height: 150,),
                     ProgressBar(stepVal: 1)
                   ],
                 ),
