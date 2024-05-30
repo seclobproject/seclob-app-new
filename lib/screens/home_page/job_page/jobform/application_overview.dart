@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:seclob_pro/resources/color.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/Modal/experience_modal.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/Modal/personal_details_modal.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/Modal/questions_modal.dart';
+import 'package:seclob_pro/screens/home_page/job_page/jobform/Modal/resume_modal.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/questions.dart';
 import 'package:seclob_pro/screens/home_page/job_page/jobform/success_screen.dart';
 import 'package:seclob_pro/widgets/appbar_common.dart';
@@ -13,6 +18,11 @@ class ApplicationOverview extends StatefulWidget {
 }
 
 class _ApplicationOverviewState extends State<ApplicationOverview> {
+
+    String Districtdropdownvalue = ' Kozhikode';
+  String Statedropdownvalue = 'Kerala';
+  var Districtitems = [' Kozhikode', 'Ernakulam', 'Thrissur'];
+  var Stateitems = ['Kerala', 'Tamil Nadu', 'New Delhi'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +67,14 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   Text("Job title", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+// POP UP
+                      showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return PesonalModal();
+                });
+                    },
                     child: Row(
                       children: [
                         Icon(Icons.edit,color: buttonGreen,size: 15,),
@@ -152,7 +169,13 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   Text("Resume", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return ResumeModal();
+                });
+                    },
                     child: Row(
                       children: [
                         Icon(Icons.edit,color: buttonGreen,size: 15,),
@@ -187,7 +210,13 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   Text("Seclob", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return QuestionsModal();
+                });
+                    },
                     child: Row(
                       children: [
                         Icon(Icons.edit,color: buttonGreen,size: 15,),
@@ -229,7 +258,13 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   Text("Relevant Experience ", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return ExperienceModal();
+                });
+                    },
                     child: Row(
                       children: [
                         Icon(Icons.edit,color: buttonGreen,size: 15,),
