@@ -24,9 +24,6 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
-
-
-
     int _calculateCrossAxisCount(BuildContext context) {
       final screenWidth = MediaQuery.of(context).size.width;
       final screenHeight = MediaQuery.of(context).size.height;
@@ -47,10 +44,11 @@ class _homeState extends State<home> {
             // Container(
             //   height: 100,
             // ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -66,12 +64,11 @@ class _homeState extends State<home> {
                       height: 30,
                     ),
                   ),
-
-                  SizedBox(width: 12,),
+                  SizedBox(
+                    width: 12,
+                  ),
                   GestureDetector(
-                    onTap: (){
-
-                    },
+                    onTap: () {},
                     child: Container(
                       height: 45,
                       width: 45,
@@ -93,18 +90,16 @@ class _homeState extends State<home> {
                     width: 150,
                     decoration: BoxDecoration(
                         color: img_bagground,
-
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.grey, // shadow color
                             blurRadius: 0, // shadow radius
                             offset: Offset(0, .1), // shadow offset
                             spreadRadius:
-                            0, // The amount the box should be inflated prior to applying the blur
+                                0, // The amount the box should be inflated prior to applying the blur
                             // set blur style
                           ),
                         ],
-
                         borderRadius: BorderRadius.circular(4)),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -133,86 +128,86 @@ class _homeState extends State<home> {
                       ),
                     ),
                   ),
-
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) =>  job()),
+                        MaterialPageRoute(builder: (context) => job()),
                       );
                     },
                     child: Stack(
-                     children: [
-
-                       Container(
-                         decoration: BoxDecoration(
-                           shape:BoxShape.circle,
-                           color: bordergreen,
-                         ),
-                         child: Container(
-                           width: 30,
-                           height: 30,
-                           decoration: BoxDecoration(
-                             shape:BoxShape.circle,
-                             color: bg,
-                           ),
-                           child: Stack(
-                             children: [
-                               SvgPicture.asset(
-                                 'assets/svg/ion_notifications-outline.svg',
-                                 // Replace with the path to your SVG file
-                                 width: 30,
-                                 height: 30,
-                                 fit: BoxFit.fill,
-                               ),
-                               Container(
-                                 width: 30,
-                                 height: 30,
-                                 alignment: Alignment.topRight,
-                                 margin: EdgeInsets.only(top: 5),
-                                 child: Container(
-                                   width: 12,
-                                   height: 15,
-                                   decoration: BoxDecoration(
-                                       shape: BoxShape.circle,
-                                       color: deletecolor,
-                                       border: Border.all(
-                                           color: Colors.white, width: 1)),
-                                   child: Padding(
-                                     padding: const EdgeInsets.all(0.0),
-                                     child: Center(
-                                       child: Text(
-                                         "1",
-                                         style: TextStyle(fontSize: 7,color: bg),
-                                       ),
-                                     ),
-                                   ),
-                                 ),
-                               ),
-                             ],
-                           ),
-                         ),
-                       ),
-                     ],
-
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: bordergreen,
+                          ),
+                          child: Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: bg,
+                            ),
+                            child: Stack(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/svg/ion_notifications-outline.svg',
+                                  // Replace with the path to your SVG file
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.fill,
+                                ),
+                                Container(
+                                  width: 30,
+                                  height: 30,
+                                  alignment: Alignment.topRight,
+                                  margin: EdgeInsets.only(top: 5),
+                                  child: Container(
+                                    width: 12,
+                                    height: 15,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: deletecolor,
+                                        border: Border.all(
+                                            color: Colors.white, width: 1)),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(0.0),
+                                      child: Center(
+                                        child: Text(
+                                          "1",
+                                          style:
+                                              TextStyle(fontSize: 7, color: bg),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
 
-
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  searchpage()),
+                  MaterialPageRoute(builder: (context) => searchpage()),
                 );
               },
               child: Padding(
-                padding:
-                const EdgeInsets.symmetric(horizontal: 40,),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                ),
                 child: Container(
                   width: 334,
                   height: 40,
@@ -225,42 +220,48 @@ class _homeState extends State<home> {
                         blurRadius: 1, // shadow radius
                         offset: Offset(0, .7), // shadow offset
                         spreadRadius:
-                        0, // The amount the box should be inflated prior to applying the blur
+                            0, // The amount the box should be inflated prior to applying the blur
                         // set blur style
                       ),
                     ],
                   ),
                   child: Center(
                       child: Row(
-                        children: [
-                          SizedBox(width: 20,),
-                          SvgPicture.asset(
-                            'assets/svg/searchfinal.svg',
-                            fit: BoxFit.scaleDown,
-                          ),
-                          SizedBox(width: 10,),
-                          Text("Click here to search",style: TextStyle(fontSize: 12),),
-                        ],
-                      )),
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      SvgPicture.asset(
+                        'assets/svg/searchfinal.svg',
+                        fit: BoxFit.scaleDown,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Click here to search",
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ],
+                  )),
                 ),
               ),
             ),
-
-
-
 
             SizedBox(
               height: 20,
             ),
 
             GestureDetector(
-              onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Employer_id()));},
-              child: Text('test')),
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Employer_id()));
+                },
+                child: Text('test')),
 
             SizedBox(
               height: 20,
             ),
-
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -286,19 +287,18 @@ class _homeState extends State<home> {
                 // ),
                 child: Center(
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     child: GridView.builder(
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       itemCount: 16,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-
                         crossAxisCount: 4,
                         childAspectRatio: (2.2 / 3),
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10,
                       ),
-                        padding: EdgeInsets.zero,
+                      padding: EdgeInsets.zero,
                       itemBuilder: (BuildContext context, int index) {
                         return Column(
                           children: [
@@ -313,21 +313,22 @@ class _homeState extends State<home> {
                                         offset: Offset(0, 4),
                                         blurRadius: 3)
                                   ],
-                                  borderRadius:
-                                  BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(10)),
                               child: Center(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding:
-                                      const EdgeInsets.symmetric(
+                                      padding: const EdgeInsets.symmetric(
                                           vertical: 5),
                                       child: FloatingActionButton(
                                         backgroundColor: buttoncolor,
                                         onPressed: () {
-                                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => servicepage()));
+                                          Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      servicepage()));
                                         },
                                         child: Icon(
                                           Icons.train,
@@ -339,11 +340,11 @@ class _homeState extends State<home> {
                                     Text(
                                       "Electrician",
                                       style: TextStyle(
-                                          fontSize: 10,
-                                          color: textcolor),
+                                          fontSize: 10, color: textcolor),
                                     ),
-                                    SizedBox(height: 15,),
-
+                                    SizedBox(
+                                      height: 15,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -357,11 +358,9 @@ class _homeState extends State<home> {
               ),
             ),
 
-
             SizedBox(
               height: 10,
             ),
-
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -421,7 +420,7 @@ class _homeState extends State<home> {
               height: 10,
             ),
             Container(
-              color: greybg,
+              color: greybackground,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
@@ -436,17 +435,21 @@ class _homeState extends State<home> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     InkWell(
-                      onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => vechilepage()));
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => vechilepage()));
                       },
                       child: SizedBox(
                         height: 230,
                         child: GridView.builder(
                           physics: NeverScrollableScrollPhysics(),
                           itemCount: 6,
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                             crossAxisSpacing: 20,
                             mainAxisSpacing: 0,
@@ -459,13 +462,15 @@ class _homeState extends State<home> {
                                   height: 80,
                                   width: 110,
                                   decoration: BoxDecoration(
-                                    color: buttoncolor,
+                                    color: appcolor,
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Center(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: <Widget>[
                                         SvgPicture.asset(
                                           'assets/svg/jeep.svg',
@@ -497,7 +502,7 @@ class _homeState extends State<home> {
               height: 20,
             ),
             Container(
-              color: greybg,
+              color: greybackground,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
@@ -615,7 +620,7 @@ class _homeState extends State<home> {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.network(
-                                          'https://www.thechennaimobiles.com/image/cache/catalog/140375-600x600.jpg',
+                                          'https://fdn2.gsmarena.com/vv/bigpic/vivo-y15-new.jpg',
                                           width: 300,
                                           height: 150,
                                           fit: BoxFit.cover,
@@ -693,258 +698,13 @@ class _homeState extends State<home> {
             ),
             SizedBox(
               height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20), color: greyhome),
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 20, left: 10),
-                        child: Text(
-                          "Most Used Services",
-                          style: TextStyle(fontSize: 18, color: textcolor),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 200,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 5,
-                        itemBuilder: (context, index) {
-                          return Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 20),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 140,
-                                      width: 90,
-                                      decoration: BoxDecoration(
-                                          color: bg,
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      child: Center(
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      vertical: 10),
-                                              child: FloatingActionButton(
-                                                backgroundColor: bg,
-                                                onPressed: () {},
-                                                child: Icon(
-                                                  Icons.train,
-                                                  size: 35,
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                            Text(
-                                              "Electrician",
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: textcolor),
-                                            ),
-                                            Align(
-                                              alignment: Alignment.center,
-                                              child: Container(
-                                                width:60,
-                                                child: Text(
-                                                  overflow: TextOverflow.ellipsis,
-                                                  "Seclob Service at Kochi",
-                                                  style: TextStyle(
-                                                    fontSize: 8,
-                                                    color: textcolor,
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(height: 2,),
-                                            Positioned(
-                                              left: 0,
-                                              right: 0,
-                                              bottom: 0,
-                                              child: Container(
-                                                padding: EdgeInsets.symmetric(
-                                                    vertical: 8,
-                                                    horizontal: 12),
-                                                decoration: BoxDecoration(
-                                                  color: bordergreen,
-                                                  // Change opacity as needed
-                                                  borderRadius:
-                                                      BorderRadius.only(
-                                                    bottomLeft:
-                                                        Radius.circular(10),
-                                                    bottomRight:
-                                                        Radius.circular(10),
-                                                  ),
-                                                ),
-                                                child: Column(
-                                                  children: [
-                                                    Center(
-                                                      child: Text(
-                                                        "20 minutes ago",
-                                                        style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontSize: 6,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
             ),
 
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              color: greybg,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: Text(
-                          "Eats",
-                          style: TextStyle(fontSize: 18, color: textcolor),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 180,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 5,
-                        itemBuilder: (context, index) {
-                          return Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 25),
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 130,
-                                      width: 110,
-                                      decoration: BoxDecoration(
-                                        color: appcolor,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.network(
-                                          'https://www.thechennaimobiles.com/image/cache/catalog/140375-600x600.jpg',
-                                          width: 300,
-                                          height: 150,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      right: 0,
-                                      bottom: 0,
-                                      child: Container(
-                                        padding: EdgeInsets.symmetric(
-                                            vertical: 8, horizontal: 12),
-                                        decoration: BoxDecoration(
-                                          color: bordergreen,
-                                          // Change opacity as needed
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(20),
-                                            bottomRight: Radius.circular(20),
-                                          ),
-                                        ),
-                                        child: Column(
-                                          children: [
-                                            Center(
-                                              child: Text(
-                                                "Y15s",
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 12,
-                                                ),
-                                              ),
-                                            ),
-                                            Row(
-                                              children: [
-                                                Center(
-                                                  child: Text(
-                                                    "23000/-",
-                                                    style: TextStyle(
-                                                      color: textyellow,
-                                                      fontSize: 12,
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  width: 3,
-                                                ),
-                                                Center(
-                                                  child: Text(
-                                                    "23000/-",
-                                                    style: TextStyle(
-                                                      decoration: TextDecoration
-                                                          .lineThrough,
-                                                      color: Colors.white,
-                                                      fontSize: 8,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              color: greybg,
+
+            // Jobs
+
+                        Container(
+              color: greybackground,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
@@ -1019,6 +779,109 @@ class _homeState extends State<home> {
                 ),
               ),
             ),
+
+
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              color: greybackground,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Text(
+                          "Eats",
+                          style: TextStyle(fontSize: 18, color: textcolor),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 180,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 5,
+                        itemBuilder: (context, index) {
+                          return Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 25),
+                                child: Stack(
+                                  children: [
+                                    Container(
+                                      height: 130,
+                                      width: 110,
+                                      decoration: BoxDecoration(
+                                        color: appcolor,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.network(
+                                          'https://as2.ftcdn.net/v2/jpg/04/90/19/23/1000_F_490192375_qg0In7Wbt4dh5zx18yEazvzPYydN2YOO.jpg',
+                                          width: 300,
+                                          height: 150,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      left: 0,
+                                      right: 0,
+                                      bottom: 0,
+                                      child: Container(
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 8, horizontal: 12),
+                                        decoration: BoxDecoration(
+                                          color: bordergreen,
+                                          // Change opacity as needed
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(20),
+                                            bottomRight: Radius.circular(20),
+                                          ),
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            Center(
+                                              child: Text(
+                                                "Biryani",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 12,
+                                                ),
+                                              ),
+                                            ),
+                                            Center(
+                                              child: Text(
+                                                "100/-",
+                                                style: TextStyle(
+                                                  color: textyellow,
+                                                  fontSize: 12,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            
             SizedBox(
               height: 20,
             ),
@@ -1028,6 +891,3 @@ class _homeState extends State<home> {
     );
   }
 }
-
-
-

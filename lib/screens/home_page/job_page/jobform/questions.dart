@@ -39,7 +39,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                       child: Text(
                         "Questions from Seclob Technologies",
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: buttonGreen),
                       ),
@@ -50,7 +50,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                     Text(
                       "Will you be able to reliably commute or relocate to calicut, for this job?",
                       style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
                     ),
                     SizedBox(height: 10,),
 
@@ -90,7 +90,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                     Text(
                       "How many years of total work experience do you have?",
                       style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       height: 5,
@@ -136,7 +136,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                             child: Center(
                                 child: Text(
                               "Continue",
-                              style: TextStyle(fontSize: 10, color: bg1),
+                              style: TextStyle(fontSize: 11, color: bg1),
                             )),
                           ),
                         ),

@@ -50,7 +50,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                       child: Text(
                         "Enter a past job that shows relevant experience",
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: buttonGreen),
                       ),
@@ -61,7 +61,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                     Text(
                       "Relevant Experience",
                       style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
                     ),
                     SizedBox(
                       height: 5,
@@ -69,7 +69,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                     Text(
                       "Company",
                       style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       height: 5,
@@ -98,7 +98,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                     Text(
                       "Experience",
                       style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       height: 5,
@@ -127,7 +127,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                                 item,
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 12), // Adjust text style
+                                    fontSize: 13), // Adjust text style
                               ),
                             );
                           }).toList(),
@@ -145,7 +145,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                     Text(
                       "Job title",
                       style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
                     ),
                     SizedBox(
                       height: 5,
@@ -191,7 +191,7 @@ class _ExpreiencePageState extends State<ExpreiencePage> {
                             child: Center(
                                 child: Text(
                               "Continue",
-                              style: TextStyle(fontSize: 10, color: bg1),
+                              style: TextStyle(fontSize: 11, color: bg1),
                             )),
                           ),
                         ),

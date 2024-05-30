@@ -39,13 +39,13 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                     children: [
                     Text(
                       "Computer Operator Part Time / Data Entry Operator Fresher",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500)
                     )
                     ,
                       SizedBox(height: 10),
                     Text(
                       "Seclob Technologies Pvt.Ltd,  ,Cyberpark, Calicut",
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: buttonGreen)
+                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: buttonGreen)
                     ),
                     SizedBox(height: 20,)
                   ]),
@@ -54,7 +54,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
               SizedBox(height: 10,),
               Row(
                 children: [
-                  Text("Job title", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
+                  Text("Job title", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
                     onTap: (){},
@@ -85,24 +85,24 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                         children: [
                         Text(
                           "Full name",
-                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)
+                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)
                         )
                         ,
                         SizedBox(height: 2),
                         Text(
                           "applicant name",
-                          style: TextStyle(fontSize: 15)
+                          style: TextStyle(fontSize: 11)
                         ),
                         SizedBox(height: 20,),
                         Text(
                           "Phone number",
-                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)
+                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)
                         )
                         ,
                         SizedBox(height: 2),
                         Text(
                           "9726781011",
-                          style: TextStyle(fontSize: 15)
+                          style: TextStyle(fontSize: 11)
                         ),
                         SizedBox(height: 20,)
                       ]),
@@ -112,18 +112,18 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                         children: [
                         Text(
                           "Email address",
-                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)
+                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)
                         )
                         ,
                         SizedBox(height: 2),
                         Text(
                           "test@gmail.com",
-                          style: TextStyle(fontSize: 15)
+                          style: TextStyle(fontSize: 11)
                         ),
                         SizedBox(height: 20,),
                         Text(
                           "State, District",
-                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)
+                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)
                         )
                         ,
                         SizedBox(height: 2),
@@ -131,11 +131,11 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                           children: [
                             Text(
                               "Kerala ,",
-                              style: TextStyle(fontSize: 15)
+                              style: TextStyle(fontSize: 11)
                             ),
                             Text(
                               "palakkad",
-                              style: TextStyle(fontSize: 15)
+                              style: TextStyle(fontSize: 11)
                             ),
                           ],
                         ),
@@ -149,7 +149,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
               SizedBox(height: 10,),
               Row(
                 children: [
-                  Text("Resume", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
+                  Text("Resume", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
                     onTap: (){},
@@ -175,7 +175,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   child: Row(
                     children: [
                       
-                      Text("filename.docx"),
+                      Text("filename.docx",style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),),
                     ],
                   ),
                 ),
@@ -183,8 +183,8 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
               SizedBox(height: 10,),
               Row(
                 children: [
-                  Text("Questions from ", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
-                  Text("Seclob", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
+                  Text("Questions from ", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
+                  Text("Seclob", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
                     onTap: (){},
@@ -210,13 +210,13 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Will you be able to reliably commute or relocate to Hilite Business Park, Calicut, Kerala for this job?", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
+                      Text("Will you be able to reliably commute or relocate to Hilite Business Park, Calicut, Kerala for this job?", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("Yes, I am planning to relocate ", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),),
+                      Text("Yes, I am planning to relocate ", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),),
                       SizedBox(height: 10,),
-                      Text("How many years of total work experience do you have?", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
+                      Text("How many years of total work experience do you have?", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("2", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),),
+                      Text("2", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),),
                       
                     ],
                   ),
@@ -226,7 +226,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
               SizedBox(height: 10,),
               Row(
                 children: [
-                  Text("Relevant Experience ", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
+                  Text("Relevant Experience ", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
                     onTap: (){},
@@ -252,9 +252,9 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Company name", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),),
+                      Text("Company name", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),),
                       SizedBox(height: 10,),
-                      Text("Job title", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),),
+                      Text("Job title", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),),
                     ],
                   ),
                 ),
@@ -262,7 +262,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
               SizedBox(height: 10,),
               Row(
                 children: [
-                  Text("Supporting documents", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),),
+                  Text("Supporting documents", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),),
                   Spacer(),
                   GestureDetector(
                     onTap: (){},
@@ -288,7 +288,7 @@ class _ApplicationOverviewState extends State<ApplicationOverview> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("No cover letter or additional documents included (optional)", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),),
+                      Text("No cover letter or additional documents included (optional)", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),),
                     ],
                   ),
                 ),

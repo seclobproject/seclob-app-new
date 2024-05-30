@@ -101,6 +101,7 @@ const Boxcolor = Color.fromRGBO(112, 112, 112, 0.32);
 const textColor = Color.fromRGBO(0, 0, 0, 1);
 
 const textColor1 = Color.fromRGBO(91, 95, 91, 1);
+const greybackground = Color.fromRGBO(247, 247, 247, 1);
 const deletecolor = Color.fromRGBO(253, 95, 74, 1);
 const spacer1 = Color.fromRGBO(238, 239, 245, 1);
 const backgroundpro = Color.fromRGBO(249,249,249,255);
